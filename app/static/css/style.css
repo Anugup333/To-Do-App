@@ -1,0 +1,216 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+}
+.container{
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header */
+header{
+    background: linear-gradient(to_right,#0062E6,#33AeFF);
+    background-color: #0062E6;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0 , 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+nav{
+    text-align: center;
+    margin-top: 10px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+nav a:hover{
+    color: #ffd700;
+}
+
+/* Footer */
+footer{
+    background-color: #343a40;
+    color: #ccc;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 60px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);   
+}
+footer p{
+    margin: 0;
+}
+
+/* Flash messages  */
+.flash.success{  color: green;  text-align: center;  }
+.flash.danger{ color: red;  text-align: center;}
+.flash.info { color: blue; text-align: center;}
+
+/* Login Form */
+.login-box{
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block; 
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px; 
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 6px; 
+}
+.btn{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;    
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #0056b3;
+}
+
+.task-box {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+.task-form{
+    display: flex;  
+    gap: 10px;
+    margin-bottom: 25px;
+    margin-left: 2px;
+}
+.task-form input {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    /* margin-right: 10px; */
+}
+
+.btn, .btn-small {
+    background-color: #0062E6;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-card {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 15px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-meta {
+    margin-top: 8px;
+    color: gray;
+    font-size: 0.9em;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.delete-btn {
+    background-color: #e60000;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 0.8em;
+    text-transform: capitalize;
+}
+
+.badge.pending { background-color: #ffc107; color: black; }
+.badge.done { background-color: #28a745; color: white; }
+.badge.working { background-color: #17a2b8; color: white; }
+
+
+/* Responsive layout for small screens */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .task-form input {
+        width: 100%;
+
+    }
+
+    .task-form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .task-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-small {
+        width: 100%;
+    }
+
+    .login-box{
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
+}

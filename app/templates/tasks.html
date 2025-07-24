@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}
+Task Page
+{% endblock title %}
+
+{% block body %}
+    
+    <div class="task-box">
+        
+        <h2>Hello , <span style="color: green;">{{name}}</span></h2>
+        <h2 style="text-align: center;">Your Tasks </h2>
+        <form method="post" action="{{url_for('tasks.add_tasks')}}" class="task-form">
+            <input type="text" name="title" placeholder="New task" required>
+            <button type="submit" class="btn">Add</button>
+        </form>
+        <br>
+        
+    {% if tasks %}
+        <div class="task-list">
+            {% for task in tasks %}
+            <div class="task-card">
+                <div class="task-header">
+                    <strong>{{ task.title }}</strong>
+                    <span class="badge {{ task.status|lower }}">{{ task.status }}</span>
+                </div>
+                <div class="task-meta">
+                    <small>Created: {{ task.created_at.strftime('%d %B %Y %I:%M %p') }}</small>
+                </div>
+                <div class="task-actions">
+                    <form action="{{ url_for('tasks.toggle_status', task_id=task.id) }}" method="post">
+                        <button type="submit" class="btn-small">Update Task</button>
+                    </form>
+                    <form action="{{ url_for('tasks.delete_task', task_id=task.id) }}" method="post">
+                        <button type="submit" class="btn-small delete-btn">Delete</button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No Tasks yet. Add one Above!</p>
+    {% endif %}
+</div>
+
+{% endblock body %}
