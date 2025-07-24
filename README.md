@@ -6,15 +6,12 @@ A simple, mobile-responsive Task Manager web application built with Flask and Fl
 
 ## 🚀 Features
 
-## 🚀 Features
-
-- User Registration and Login system
-- Session-based authentication
-- Add new tasks with descriptions and deadlines
-- Mark tasks as `Working` or `Done` 
-- Update or delete tasks
-- Responsive design for mobile and desktop
-- Built with Flask and styled using Bootstrap
+- ✅ User registration & login (session-based)
+- ✍️ Add tasks with descriptions
+- 🔄 Mark tasks as `Working` or `Done`
+- 🗑️ Update and delete tasks
+- 📱 Responsive mobile & desktop layout
+- 💾 Data stored in SQLite using Flask-SQLAlchemy ORM
 
 ---
 
@@ -22,7 +19,7 @@ A simple, mobile-responsive Task Manager web application built with Flask and Fl
 
 - **Backend**: Flask (Python), Flask_SQLAlchemy
 - **Frontend**: HTML5, CSS3 (Responsive with Flexbox and Media Queries)
-- **Database**: SQLite
+- **Database**: Flask-SQLAlchemy
 - **Templating**: Jinja2 (default in Flask)
 
 ---
@@ -31,10 +28,36 @@ A simple, mobile-responsive Task Manager web application built with Flask and Fl
 
 ---
 
-## 🔧 Installation & Setup
+## ✅  Prerequisites
 
-### 1. Clone the repository
+- 🐍 Python 3.8 or higher
+- 🧪 pip (Python package manager)
+- 💻 Git (for cloning the repository)
+- 🧱 Virtualenv (optional but recommended)
 
-```bash
-git clone https://github.com/yourusername/flask-task-manager.git
-cd flask-task-manager
+## 🏗️ Project Setup & Installation
+
+1. **Clone the repo**
+   ```bash
+   
+   git clone https://github.com/Anugup333/To-Do-App.git
+   
+
+2. **Create virtual environment
+    ```bash
+
+      python -m venv env
+      env/Scripts/activate    #  on Windows
+  
+3. **Install dependencies
+       ```bash
+
+         pip install -r requirements.txt
+
+4. **Run the development server
+       ```bash
+
+         python run.py
+
+5. **Visit http://127.0.0.1:5000/ in your browser.
+
